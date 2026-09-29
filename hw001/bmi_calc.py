@@ -1,6 +1,5 @@
 # bmi_calc.py bmi 계산 함수 소스코드
 
-# bmi_calc.py
 
 def bmi(height_cm: int, weight_kg: int) -> float:
     height_m = height_cm / 100.0
