@@ -1,16 +1,13 @@
+# main.py
 from file_io import read_health_data
-from bmi_calc import calculate_bmi
 from drawer import draw_table_and_data
 
 def main():
-    records = read_health_data("health.txt")
+    # health.txt 파일 읽기 및 BMI 데이터 리스트 생성
+    people = read_health_data("health.txt")
 
-    for rec in records:
-        bmi, status = calculate_bmi(rec["height"], rec["weight"])
-        rec["bmi"] = bmi
-        rec["status"] = status
-
-    draw_table_and_data(records)
+    # Turtle 그래픽 표 출력
+    draw_table_and_data(people)
 
 if __name__ == "__main__":
     main()
